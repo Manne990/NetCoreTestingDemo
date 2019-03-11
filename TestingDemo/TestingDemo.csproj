@@ -18,5 +18,6 @@
     <Folder Include="Service\" />
     <Folder Include="ViewModel\" />
     <Folder Include="View\" />
+    <Folder Include="Model\" />
   </ItemGroup>
 </Project>

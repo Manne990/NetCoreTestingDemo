@@ -1,4 +1,7 @@
 ﻿using Autofac;
+using TestingDemo.Repository;
+using TestingDemo.Service;
+using TestingDemo.ViewModel;
 
 namespace TestingDemo
 {
@@ -10,7 +13,9 @@ namespace TestingDemo
         {
             var builder = new ContainerBuilder();
 
-            //builder.RegisterType<EmployeeService>()?.As<IEmployeeService>()?.SingleInstance();
+            builder.RegisterType<ProfileRepository>()?.As<IProfileRepository>()?.SingleInstance();
+            builder.RegisterType<ProfileService>()?.As<IProfileService>()?.SingleInstance();
+            builder.RegisterType<ShowProfileViewModel>()?.As<IShowProfileViewModel>()?.SingleInstance();
 
             Container = builder.Build();
         }
