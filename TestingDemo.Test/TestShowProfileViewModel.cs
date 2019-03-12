@@ -75,7 +75,6 @@ namespace TestingDemo.Test
             _profileService.HasProfile().Returns(true);
             _profileService.GetProfile().Returns(profile);
 
-
             // ACT
             _subject.LoadProfile();
 
